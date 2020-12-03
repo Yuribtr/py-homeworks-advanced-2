@@ -4,7 +4,7 @@
 - Made 2 classes. First one parses data file via JSON library, another one reads data file line by line.
 - Made iterator for navigating through JSON file.
 
-*** Wraning. Due to encoding errors of some strings, second class which reads file line by line - doesn't see all strings.
+*** Warning. Due to encoding errors of some strings, second class which reads file line by line - doesn't see all strings.
  
 
 1. Написать класс итератора, который по каждой стране из файла [countries.json](https://github.com/mledoze/countries/blob/master/countries.json) ищет страницу из википедии.   
