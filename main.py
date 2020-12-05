@@ -31,6 +31,8 @@ if __name__ == '__main__':
                 yield json_file.readline()
                 tmp = json_file.readline()
 
+    counter = 0
     for country in countryReaderIter('result.txt'):
+        counter += 1
         print(hashlib.md5(country.encode('utf8')).hexdigest())
     print(f'Processed {counter} lines')
