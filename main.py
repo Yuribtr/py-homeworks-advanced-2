@@ -1,5 +1,4 @@
 import hashlib
-import json
 from readers.CountryReaderJson import CountryReaderJson
 from readers.CountryReaderLines import CountryReaderLines
 
@@ -26,10 +25,12 @@ if __name__ == '__main__':
         This iterator returns country names from parsed JSON file
         """
         with open(filename, 'r', encoding='utf8') as json_file:
-            tmp = json_file.readline()
-            while tmp:
-                yield json_file.readline()
+            while True:
                 tmp = json_file.readline()
+                if tmp:
+                    yield tmp
+                else:
+                    break
 
     counter = 0
     for country in countryReaderIter('result.txt'):
