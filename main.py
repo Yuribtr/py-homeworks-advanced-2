@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     def countryReaderIter(filename: str):
         """
-        This iterator returns country names from parsed JSON file
+        This iterator returns MD5 hash of each line from text file
         """
         with open(filename, 'r', encoding='utf8') as json_file:
             while True:
